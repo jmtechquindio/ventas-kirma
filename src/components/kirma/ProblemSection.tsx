@@ -15,7 +15,7 @@ export default function ProblemSection() {
     <section id="problema" className="py-20 sm:py-28 bg-card" ref={ref}>
       <div className="container">
         <div className="max-w-2xl mx-auto text-center mb-14">
-          <p className={`text-sm font-semibold text-accent uppercase tracking-widest mb-3 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+          <p className={`text-sm font-semibold text-destructive uppercase tracking-widest mb-3 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
             El problema real
           </p>
           <h2 className={`text-3xl sm:text-4xl font-heading font-bold text-balance leading-tight transition-all duration-700 delay-100 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>

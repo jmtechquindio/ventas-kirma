@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="container relative">
         <div className="max-w-3xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-kirma-green-light text-primary text-sm font-medium mb-8 animate-fade-up opacity-0" style={{ animationDelay: "0ms" }}>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-kirma-teal-light text-accent text-sm font-medium mb-8 animate-fade-up opacity-0" style={{ animationDelay: "0ms" }}>
             <MessageCircle size={14} />
             Automatización que genera dinero
           </div>
@@ -27,7 +27,7 @@ export default function Hero() {
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up opacity-0" style={{ animationDelay: "240ms" }}>
             <a
               href="#planes"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-primary text-primary-foreground font-semibold text-base hover:opacity-90 active:scale-[0.97] transition-all duration-200 animate-pulse-green"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-primary text-primary-foreground font-semibold text-base hover:opacity-90 active:scale-[0.97] transition-all duration-200 animate-pulse-cta"
             >
               Quiero automatizar mi negocio
               <ArrowRight size={18} />

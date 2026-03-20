@@ -6,69 +6,69 @@
 
 @layer base {
   :root {
-    --background: 220 20% 97%;
-    --foreground: 220 25% 10%;
+    --background: 210 20% 98%;
+    --foreground: 215 28% 12%;
     --card: 0 0% 100%;
-    --card-foreground: 220 25% 10%;
+    --card-foreground: 215 28% 12%;
     --popover: 0 0% 100%;
-    --popover-foreground: 220 25% 10%;
-    --primary: 145 72% 40%;
+    --popover-foreground: 215 28% 12%;
+    --primary: 210 65% 28%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 220 14% 92%;
-    --secondary-foreground: 220 25% 10%;
-    --muted: 220 14% 92%;
-    --muted-foreground: 220 10% 46%;
-    --accent: 35 95% 55%;
+    --secondary: 210 14% 93%;
+    --secondary-foreground: 215 28% 12%;
+    --muted: 210 14% 93%;
+    --muted-foreground: 215 12% 48%;
+    --accent: 168 55% 38%;
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 84% 60%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
-    --border: 220 13% 88%;
-    --input: 220 13% 88%;
-    --ring: 145 72% 40%;
+    --border: 210 16% 89%;
+    --input: 210 16% 89%;
+    --ring: 210 65% 28%;
     --radius: 0.75rem;
-    --kirma-dark: 220 25% 8%;
-    --kirma-green: 145 72% 40%;
-    --kirma-green-light: 145 60% 95%;
-    --kirma-amber: 35 95% 55%;
-    --kirma-surface: 220 20% 97%;
+    --kirma-dark: 215 28% 10%;
+    --kirma-navy: 210 65% 28%;
+    --kirma-teal: 168 55% 38%;
+    --kirma-teal-light: 168 40% 95%;
+    --kirma-surface: 210 20% 98%;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-primary: 210 65% 28%;
+    --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 145 72% 40%;
+    --sidebar-border: 210 16% 91%;
+    --sidebar-ring: 210 65% 28%;
   }
 
   .dark {
-    --background: 220 25% 8%;
+    --background: 215 28% 8%;
     --foreground: 210 40% 98%;
-    --card: 220 25% 12%;
+    --card: 215 28% 12%;
     --card-foreground: 210 40% 98%;
-    --popover: 220 25% 12%;
+    --popover: 215 28% 12%;
     --popover-foreground: 210 40% 98%;
-    --primary: 145 72% 45%;
+    --primary: 210 60% 42%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 220 20% 18%;
+    --secondary: 215 20% 18%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 220 20% 18%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 35 95% 55%;
+    --muted: 215 20% 18%;
+    --muted-foreground: 215 16% 60%;
+    --accent: 168 50% 42%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 220 20% 20%;
-    --input: 220 20% 20%;
-    --ring: 145 72% 45%;
+    --border: 215 20% 20%;
+    --input: 215 20% 20%;
+    --ring: 210 60% 42%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary: 210 60% 42%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 145 72% 40%;
+    --sidebar-ring: 210 60% 42%;
   }
 }
 
@@ -92,7 +92,7 @@
 
 @layer components {
   .kirma-gradient {
-    background: linear-gradient(135deg, hsl(var(--kirma-dark)) 0%, hsl(220, 25%, 14%) 100%);
+    background: linear-gradient(135deg, hsl(var(--kirma-dark)) 0%, hsl(215, 28%, 16%) 100%);
   }
   .kirma-card {
     @apply rounded-2xl bg-card shadow-[0_1px_3px_rgba(0,0,0,0.04),0_6px_24px_rgba(0,0,0,0.06)] transition-shadow duration-300;

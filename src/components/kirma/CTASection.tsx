@@ -20,7 +20,7 @@ export default function CTASection() {
             href="https://calendly.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-semibold text-base hover:opacity-90 active:scale-[0.97] transition-all duration-200 animate-pulse-green"
+            className="mt-8 inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-accent text-accent-foreground font-semibold text-base hover:opacity-90 active:scale-[0.97] transition-all duration-200 animate-pulse-cta"
           >
             Agendar mi demo gratis
             <ArrowRight size={18} />
