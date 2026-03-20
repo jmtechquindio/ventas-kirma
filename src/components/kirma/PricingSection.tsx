@@ -59,10 +59,10 @@ export default function PricingSection() {
     <section id="planes" ref={ref} className="py-20 sm:py-28">
       <div className="container">
         <div className="max-w-2xl mx-auto text-center mb-14">
-          <p className={`text-sm font-semibold text-primary uppercase tracking-widest mb-3 transition-all duration-700 ${visible ? "opacity-100" : "opacity-0 translate-y-4"}`}>
+          <p className={`text-sm font-semibold text-accent uppercase tracking-widest mb-3 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
             Planes
           </p>
-          <h2 className={`text-3xl sm:text-4xl font-heading font-bold text-balance leading-tight transition-all duration-700 delay-100 ${visible ? "opacity-100" : "opacity-0 translate-y-4"}`}>
+          <h2 className={`text-3xl sm:text-4xl font-heading font-bold text-balance leading-tight transition-all duration-700 delay-100 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
             Invierte en clientes, no en personal
           </h2>
         </div>
@@ -88,7 +88,7 @@ export default function PricingSection() {
               <ul className="mt-6 space-y-3">
                 {plan.features.map((f) => (
                   <li key={f} className="flex items-start gap-2 text-sm">
-                    <Check size={16} className="text-primary mt-0.5 flex-shrink-0" />
+                    <Check size={16} className="text-accent mt-0.5 flex-shrink-0" />
                     <span>{f}</span>
                   </li>
                 ))}

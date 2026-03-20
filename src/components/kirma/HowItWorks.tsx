@@ -29,10 +29,10 @@ export default function HowItWorks() {
     <section ref={ref} className="py-20 sm:py-28 bg-card">
       <div className="container">
         <div className="max-w-2xl mx-auto text-center mb-14">
-          <p className={`text-sm font-semibold text-primary uppercase tracking-widest mb-3 transition-all duration-700 ${visible ? "opacity-100" : "opacity-0 translate-y-4"}`}>
+          <p className={`text-sm font-semibold text-accent uppercase tracking-widest mb-3 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
             Cómo funciona
           </p>
-          <h2 className={`text-3xl sm:text-4xl font-heading font-bold text-balance leading-tight transition-all duration-700 delay-100 ${visible ? "opacity-100" : "opacity-0 translate-y-4"}`}>
+          <h2 className={`text-3xl sm:text-4xl font-heading font-bold text-balance leading-tight transition-all duration-700 delay-100 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
             3 pasos. Sin complicaciones.
           </h2>
         </div>
@@ -44,10 +44,10 @@ export default function HowItWorks() {
               className={`relative text-center transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
               style={{ transitionDelay: `${200 + i * 120}ms` }}
             >
-              <div className="w-14 h-14 rounded-2xl bg-kirma-green-light flex items-center justify-center mx-auto mb-5">
-                <s.icon size={24} className="text-primary" />
+              <div className="w-14 h-14 rounded-2xl bg-kirma-teal-light flex items-center justify-center mx-auto mb-5">
+                <s.icon size={24} className="text-accent" />
               </div>
-              <span className="text-xs font-heading font-bold text-primary/60 uppercase tracking-widest">Paso {s.num}</span>
+              <span className="text-xs font-heading font-bold text-accent/60 uppercase tracking-widest">Paso {s.num}</span>
               <h3 className="font-heading font-bold text-lg mt-2 mb-2">{s.title}</h3>
               <p className="text-sm text-muted-foreground text-pretty">{s.desc}</p>
 

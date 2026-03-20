@@ -30,13 +30,13 @@ export default function DemoSection() {
     <section id="demo" ref={ref} className="py-20 sm:py-28 bg-card">
       <div className="container">
         <div className="max-w-2xl mx-auto text-center mb-14">
-          <p className={`text-sm font-semibold text-primary uppercase tracking-widest mb-3 transition-all duration-700 ${visible ? "opacity-100" : "opacity-0 translate-y-4"}`}>
+          <p className={`text-sm font-semibold text-accent uppercase tracking-widest mb-3 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
             Demo en vivo
           </p>
-          <h2 className={`text-3xl sm:text-4xl font-heading font-bold text-balance leading-tight transition-all duration-700 delay-100 ${visible ? "opacity-100" : "opacity-0 translate-y-4"}`}>
+          <h2 className={`text-3xl sm:text-4xl font-heading font-bold text-balance leading-tight transition-all duration-700 delay-100 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
             Así se ve en acción
           </h2>
-          <p className={`mt-4 text-muted-foreground text-pretty transition-all duration-700 delay-200 ${visible ? "opacity-100" : "opacity-0 translate-y-4"}`}>
+          <p className={`mt-4 text-muted-foreground text-pretty transition-all duration-700 delay-200 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
             Simulación real: un paciente pregunta por WhatsApp → el bot responde, captura datos y agenda — todo sin intervención humana.
           </p>
         </div>
@@ -47,7 +47,7 @@ export default function DemoSection() {
             <div className="rounded-2xl bg-background overflow-hidden">
               {/* Header */}
               <div className="kirma-gradient px-4 py-3 flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center text-primary-foreground text-xs font-bold">K</div>
+                <div className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center text-primary-foreground text-xs font-bold">K</div>
                 <div>
                   <p className="text-sm font-semibold text-primary-foreground">Clínica Dental Sonrisa</p>
                   <p className="text-xs text-primary-foreground/60">En línea</p>
@@ -90,7 +90,7 @@ export default function DemoSection() {
           {/* CRM capture indicator */}
           {visibleMessages >= conversation.length && (
             <div className="mt-6 kirma-card p-4 text-center animate-fade-up">
-              <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">📋 Capturado en CRM</p>
+              <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-1">📋 Capturado en CRM</p>
               <p className="text-sm text-muted-foreground">María González · Limpieza · Jueves 10:30 · Confirmada</p>
             </div>
           )}
