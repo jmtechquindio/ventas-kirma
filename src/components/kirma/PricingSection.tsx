@@ -93,9 +93,13 @@ export default function PricingSection() {
                 </div>
               )}
               <h3 className="font-heading font-bold text-lg">{plan.name}</h3>
-              <div className="mt-3 flex items-baseline gap-1">
-                <span className="text-3xl font-heading font-bold">{plan.price}</span>
-                <span className="text-sm text-muted-foreground">{plan.period}</span>
+              <div className="mt-3">
+                <div className="flex items-baseline gap-1">
+                  <span className="text-3xl font-heading font-bold">{plan.price}</span>
+                  {plan.currency && <span className="text-sm font-medium text-muted-foreground">{plan.currency}</span>}
+                  <span className="text-sm text-muted-foreground">{plan.period}</span>
+                </div>
+                {plan.usd && <p className="text-xs text-muted-foreground mt-1">{plan.usd}</p>}
               </div>
               <p className="mt-2 text-sm text-muted-foreground">{plan.desc}</p>
               <ul className="mt-6 space-y-3">
