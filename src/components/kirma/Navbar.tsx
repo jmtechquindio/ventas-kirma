@@ -13,10 +13,11 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-lg border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-xl border-b border-border/60">
       <div className="container flex items-center justify-between h-16">
-        <a href="#" className="font-heading font-bold text-xl tracking-tight">
-          <span className="text-primary">KIRMA</span>
+        <a href="#" className="font-heading font-bold text-xl tracking-tight flex items-center gap-1.5">
+          <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-primary text-primary-foreground text-sm font-bold">K</span>
+          <span className="text-foreground">KIRMA</span>
         </a>
 
         {/* Desktop */}
@@ -28,7 +29,7 @@ export default function Navbar() {
           ))}
           <a
             href="#planes"
-            className="inline-flex items-center px-5 py-2.5 rounded-lg bg-primary text-primary-foreground text-sm font-semibold hover:opacity-90 active:scale-[0.97] transition-all duration-200"
+            className="inline-flex items-center px-5 py-2.5 rounded-lg bg-accent text-accent-foreground text-sm font-semibold hover:opacity-90 active:scale-[0.97] transition-all duration-200"
           >
             Quiero más clientes
           </a>
@@ -48,7 +49,7 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a href="#planes" onClick={() => setOpen(false)} className="mt-2 block text-center px-5 py-2.5 rounded-lg bg-primary text-primary-foreground text-sm font-semibold">
+          <a href="#planes" onClick={() => setOpen(false)} className="mt-2 block text-center px-5 py-2.5 rounded-lg bg-accent text-accent-foreground text-sm font-semibold">
             Quiero más clientes
           </a>
         </div>
