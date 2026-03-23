@@ -1,5 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Check } from "lucide-react";
+import { Check, Star } from "lucide-react";
 
 const plans = [
   {
@@ -16,6 +16,8 @@ const plans = [
     ],
     cta: "Empezar ahora",
     highlighted: false,
+    accent: "border-kirma-teal/20",
+    ctaClass: "border-2 border-border text-foreground hover:border-accent/40 hover:bg-kirma-teal-light",
   },
   {
     name: "Growth",
@@ -33,6 +35,8 @@ const plans = [
     ],
     cta: "Escalar mi negocio",
     highlighted: true,
+    accent: "ring-2 ring-kirma-gold",
+    ctaClass: "kirma-gradient-accent text-accent-foreground hover:opacity-90",
   },
   {
     name: "Enterprise",
@@ -49,6 +53,8 @@ const plans = [
     ],
     cta: "Hablar con ventas",
     highlighted: false,
+    accent: "border-kirma-indigo/20",
+    ctaClass: "border-2 border-border text-foreground hover:border-primary/30 hover:bg-kirma-indigo-light",
   },
 ];
 
@@ -71,11 +77,12 @@ export default function PricingSection() {
           {plans.map((plan, i) => (
             <div
               key={plan.name}
-              className={`kirma-card p-6 ${plan.highlighted ? "ring-2 ring-primary relative" : ""} transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+              className={`kirma-card p-6 ${plan.accent} relative transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
               style={{ transitionDelay: `${200 + i * 100}ms` }}
             >
               {plan.highlighted && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-primary text-primary-foreground text-xs font-semibold">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-kirma-gold text-white text-xs font-semibold flex items-center gap-1 shadow-lg shadow-kirma-gold/30">
+                  <Star size={10} fill="currentColor" />
                   Más popular
                 </div>
               )}
@@ -95,11 +102,7 @@ export default function PricingSection() {
               </ul>
               <a
                 href="#contacto"
-                className={`mt-8 block w-full text-center py-3 rounded-xl font-semibold text-sm transition-all duration-200 active:scale-[0.97] ${
-                  plan.highlighted
-                    ? "bg-primary text-primary-foreground hover:opacity-90"
-                    : "border-2 border-border text-foreground hover:border-primary/30"
-                }`}
+                className={`mt-8 block w-full text-center py-3 rounded-xl font-semibold text-sm transition-all duration-200 active:scale-[0.97] ${plan.ctaClass}`}
               >
                 {plan.cta}
               </a>

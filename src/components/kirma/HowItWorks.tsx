@@ -7,18 +7,27 @@ const steps = [
     icon: MessageSquare,
     title: "El cliente te escribe",
     desc: "Por WhatsApp, Instagram o tu web. El bot responde en segundos, resuelve dudas y captura sus datos.",
+    color: "bg-kirma-teal-light",
+    iconColor: "text-accent",
+    numColor: "text-accent",
   },
   {
     num: "02",
     icon: Calendar,
     title: "Se agenda la cita",
     desc: "El sistema muestra horarios disponibles y confirma la cita. Manda recordatorio automático.",
+    color: "bg-kirma-gold-light",
+    iconColor: "text-kirma-gold",
+    numColor: "text-kirma-gold",
   },
   {
     num: "03",
     icon: TrendingUp,
     title: "Tú cierras la venta",
     desc: "Llegas a la cita con toda la info del cliente. Solo te falta cerrar. El CRM registra todo.",
+    color: "bg-kirma-indigo-light",
+    iconColor: "text-kirma-indigo",
+    numColor: "text-kirma-indigo",
   },
 ];
 
@@ -29,7 +38,7 @@ export default function HowItWorks() {
     <section ref={ref} className="py-20 sm:py-28 bg-card">
       <div className="container">
         <div className="max-w-2xl mx-auto text-center mb-14">
-          <p className={`text-sm font-semibold text-accent uppercase tracking-widest mb-3 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+          <p className={`text-sm font-semibold text-kirma-gold uppercase tracking-widest mb-3 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
             Cómo funciona
           </p>
           <h2 className={`text-3xl sm:text-4xl font-heading font-bold text-balance leading-tight transition-all duration-700 delay-100 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
@@ -44,10 +53,10 @@ export default function HowItWorks() {
               className={`relative text-center transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
               style={{ transitionDelay: `${200 + i * 120}ms` }}
             >
-              <div className="w-14 h-14 rounded-2xl bg-kirma-teal-light flex items-center justify-center mx-auto mb-5">
-                <s.icon size={24} className="text-accent" />
+              <div className={`w-14 h-14 rounded-2xl ${s.color} flex items-center justify-center mx-auto mb-5`}>
+                <s.icon size={24} className={s.iconColor} />
               </div>
-              <span className="text-xs font-heading font-bold text-accent/60 uppercase tracking-widest">Paso {s.num}</span>
+              <span className={`text-xs font-heading font-bold ${s.numColor} uppercase tracking-widest`}>Paso {s.num}</span>
               <h3 className="font-heading font-bold text-lg mt-2 mb-2">{s.title}</h3>
               <p className="text-sm text-muted-foreground text-pretty">{s.desc}</p>
 
