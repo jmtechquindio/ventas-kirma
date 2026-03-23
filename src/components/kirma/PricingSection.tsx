@@ -3,15 +3,17 @@ import { Check, Star } from "lucide-react";
 
 const plans = [
   {
-    name: "Starter",
-    price: "$297",
+    name: "Básico",
+    price: "$349.000",
+    currency: "COP",
     period: "/mes",
-    desc: "Para negocios que quieren empezar a automatizar.",
+    usd: "~$85 USD",
+    desc: "Para negocios que quieren empezar a automatizar su atención.",
     features: [
       "Bot WhatsApp (hasta 500 conversaciones/mes)",
       "Agenda automática (1 calendario)",
       "CRM básico en Google Sheets",
-      "Recordatorios de cita",
+      "Recordatorios de cita automáticos",
       "Soporte por email",
     ],
     cta: "Empezar ahora",
@@ -20,15 +22,17 @@ const plans = [
     ctaClass: "border-2 border-border text-foreground hover:border-accent/40 hover:bg-kirma-teal-light",
   },
   {
-    name: "Growth",
-    price: "$597",
+    name: "Profesional",
+    price: "$749.000",
+    currency: "COP",
     period: "/mes",
-    desc: "Para negocios que quieren escalar sus ventas.",
+    usd: "~$180 USD",
+    desc: "Para negocios que quieren escalar ventas y fidelizar clientes.",
     features: [
-      "Todo lo de Starter +",
+      "Todo lo de Básico +",
       "Conversaciones ilimitadas",
       "Múltiples calendarios",
-      "Follow-up inteligente",
+      "Follow-up inteligente automático",
       "Dashboard de métricas",
       "Soporte prioritario por WhatsApp",
       "Flujos personalizados",
@@ -39,17 +43,19 @@ const plans = [
     ctaClass: "kirma-gradient-accent text-accent-foreground hover:opacity-90",
   },
   {
-    name: "Enterprise",
-    price: "Custom",
+    name: "Empresarial",
+    price: "A medida",
+    currency: "",
     period: "",
-    desc: "Para franquicias y cadenas con múltiples sedes.",
+    usd: "",
+    desc: "Para franquicias y cadenas con múltiples sedes en Colombia.",
     features: [
-      "Todo lo de Growth +",
-      "Multi-sucursal",
-      "Integración con tu software",
+      "Todo lo de Profesional +",
+      "Multi-sucursal ilimitada",
+      "Integración con tu software actual",
       "API personalizada",
-      "Onboarding dedicado",
-      "Account manager",
+      "Onboarding y capacitación dedicada",
+      "Account manager exclusivo",
     ],
     cta: "Hablar con ventas",
     highlighted: false,
@@ -87,9 +93,13 @@ export default function PricingSection() {
                 </div>
               )}
               <h3 className="font-heading font-bold text-lg">{plan.name}</h3>
-              <div className="mt-3 flex items-baseline gap-1">
-                <span className="text-3xl font-heading font-bold">{plan.price}</span>
-                <span className="text-sm text-muted-foreground">{plan.period}</span>
+              <div className="mt-3">
+                <div className="flex items-baseline gap-1">
+                  <span className="text-3xl font-heading font-bold">{plan.price}</span>
+                  {plan.currency && <span className="text-sm font-medium text-muted-foreground">{plan.currency}</span>}
+                  <span className="text-sm text-muted-foreground">{plan.period}</span>
+                </div>
+                {plan.usd && <p className="text-xs text-muted-foreground mt-1">{plan.usd}</p>}
               </div>
               <p className="mt-2 text-sm text-muted-foreground">{plan.desc}</p>
               <ul className="mt-6 space-y-3">
