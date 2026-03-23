@@ -28,7 +28,7 @@ export default function Hero() {
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up opacity-0" style={{ animationDelay: "240ms" }}>
             <a
               href="#planes"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-accent text-accent-foreground font-semibold text-base hover:opacity-90 active:scale-[0.97] transition-all duration-200 animate-pulse-cta shadow-lg shadow-accent/20"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-accent text-accent-foreground font-semibold text-base hover:opacity-90 active:scale-[0.97] transition-all duration-200 shadow-lg shadow-accent/20"
             >
               Quiero automatizar mi negocio
               <ArrowRight size={18} />
